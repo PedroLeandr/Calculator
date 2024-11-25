@@ -16,6 +16,7 @@ const equals = document.getElementById("equals");
 const dot = document.getElementById("dot");
 const remove = document.getElementById("remove");
 const clear = document.getElementById("clear");
+const invert = document.getElementById("invert");
 
 const visor = document.getElementById("visor")
 const container = document.getElementById("Container");
@@ -123,5 +124,11 @@ remove.onclick = function(){
 
 clear.onclick = function(){
     value = "0";
+    visor.textContent = value
+}
+
+invert.onclick = function(){
+    value = eval(value);
+    value = -value;
     visor.textContent = value
 }

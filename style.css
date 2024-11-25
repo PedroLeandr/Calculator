@@ -80,7 +80,6 @@ body{
     cursor: pointer;
 }
 
-.container .buttons .button:nth-child(1),
-.container .buttons .button:nth-child(2){
+.container .buttons .button:last-child{
     grid-column: span 2;
 }
