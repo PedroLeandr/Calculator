@@ -1,0 +1,86 @@
+:root {
+    --background: #121212;
+    --calculator-background: #1C1C1C;
+    --border: solid 2px #FF5722;
+    --buttons: #505050;
+    --text: #FFFFFF;
+    --operation-buttons: #FF6F00;
+    --result-visor: #505050;
+}
+
+.button{
+    background-color: var(--buttons);
+    color: var(--text);
+    border-radius: 15px;
+    width: 100%;
+    height: 75px;
+    font-size: 30px;
+    border: var(--border);
+}
+
+.button.operation{
+    background-color: var(--operation-buttons);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: var(--calculator-background);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: var(--border);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .visor{
+    background-color: var(--result-visor);
+    width: 350px;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 15px;
+    border-radius: 15px;
+    border: var(--border);
+    font-size: 50px;
+    color: var(--text);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.container .buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 350px;
+    place-items: center;
+    gap: 15px;
+    margin: 15px;
+}
+
+.container .buttons .button{
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.container .buttons .button:nth-child(1),
+.container .buttons .button:nth-child(2){
+    grid-column: span 2;
+}
